@@ -10,14 +10,20 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             background: rgb(194, 194, 194);
         }
+        #principal{
+            background: white;
+            width: 400px;
+            margin: auto;
+            
+        }
     </style>
 </head>
 <body>
     <div id="principal">
-        
+
         <h1>Calculando o IMC</h1>
         <p>Digite seu peso e altura!</p>
-        peso: <input type="number" id="peso" name="peso" >
+        peso: <input type="number" id="peso" name="peso" ><br>
         altura: <input type="number" id="altura" name="altura" ><br>
         <input type="button" onclick="confirmar()" value="Confirmar">
         <p id="resultado">Resultado!</p>
