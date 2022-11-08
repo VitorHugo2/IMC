@@ -14,7 +14,13 @@
             background: white;
             width: 400px;
             margin: auto;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
             
+        }
+        #div_padrao{
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -23,8 +29,13 @@
 
         <h1>Calculando o IMC</h1>
         <p>Digite seu peso e altura!</p>
-        peso: <input type="number" id="peso" name="peso" placeholder="Ex. 80.20" ><br>
-        altura: <input type="number" id="altura" name="altura" placeholder="Ex. 1.85"><br>
+        <div id="div_padrao">
+            peso: <input type="number" id="peso" name="peso" placeholder="Ex. 80.20" ><br>
+        </div>
+        <div id="div_padrao">
+            altura: <input type="number" id="altura" name="altura" placeholder="Ex. 1.85"><br>
+        </div>
+        
         <input type="button" onclick="confirmar()" value="Confirmar">
         <p id="resultado">Resultado!</p>
 
@@ -35,8 +46,11 @@
             var peso_bruto = Number(document.getElementById('peso').value)
             var altura_bruto = Number(document.getElementById('altura').value)
             var imc = parseInt( (peso_bruto / (altura_bruto * 2)))
-            document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc}`
+            if(imc < 17){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está muito abaixo do peso`
+            }
             
+
         }
     </script>
 </body>
