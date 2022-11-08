@@ -47,7 +47,19 @@
             var altura_bruto = Number(document.getElementById('altura').value)
             var imc = parseInt( (peso_bruto / (altura_bruto * 2)))
             if(imc < 17){
-                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está muito abaixo do peso`
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está muito abaixo do peso!`
+            }else if(imc >= 17 && imc < 19){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está abaixo do peso!`
+            }else if(imc >= 19 && imc < 25){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está com peso normal!`
+            }else if(imc >= 25 && imc < 30){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está acima do peso!`
+            }else if(imc >= 30 && imc < 35){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está obeso!`
+            }else if(imc >= 35 && imc < 40){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está no 2° grau da obesidade (Severa)!`
+            }else if(imc >= 40){
+                document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc} Você está no 3° grau da obesidade (Mórbida)!`
             }
             
 
