@@ -30,6 +30,14 @@
 
     </div>
 
-    
+    <script>
+        function confirmar(){
+            var peso_bruto = Number(document.getElementById('peso').value)
+            var altura_bruto = Number(document.getElementById('altura').value)
+            var imc = parseInt( (peso_bruto / (altura_bruto * 2)))
+            document.getElementById("resultado").innerHTML = `Seu IMC é de ${imc}`
+            
+        }
+    </script>
 </body>
 </html>
