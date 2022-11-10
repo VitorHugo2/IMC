@@ -1,4 +1,4 @@
-### 📚 Tabuada para numeros positivos e negativos!
+### 📚 Calcular o IMC!
 
 <br><div>
     <img src="img.png"/>
